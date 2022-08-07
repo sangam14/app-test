@@ -1,0 +1,13 @@
+services:
+  bot:
+    build: vote
+    scale: 2
+    ports:
+      - 8000:8888
+
+  chatbot:
+    image: mrmehta54/testupdate
+    ports:
+      - 8888
+    volumes:
+      - chatbot:/data
